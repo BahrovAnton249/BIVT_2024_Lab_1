@@ -46,7 +46,7 @@ public class Program
         //program.Task_2_3(6);
         //program.Task_2_4(3, 1, 3);
         //program.Task_2_5(6, 25.2);
-        //program.Task_2_6(3);
+        //program.Task_2_6(5);
         //program.Task_2_7(3);
         //program.Task_2_8(3);
         //program.Task_2_9(6);
@@ -70,7 +70,7 @@ public class Program
         //program.Task_3_7();
         //program.Task_3_8();
         //program.Task_3_9();
-        program.Task_3_10();
+        //program.Task_3_10();
         //program.Task_3_11();
         //program.Task_3_12(10, 0);
         //program.Task_3_13(10, 5, 0);
@@ -411,7 +411,7 @@ public class Program
         {
             double x = double.Parse(Console.ReadLine());
             double y = double.Parse(Console.ReadLine());
-            if (x >= 0 && x <= Math.PI && Math.Sin(x) >= y)
+            if (x >= 0 && x <= Math.PI && Math.Sin(x) >= y && y >= 0)
             {
                 k++;
             }
@@ -434,11 +434,23 @@ public class Program
             double y = double.Parse(Console.ReadLine());
             if (x > 0 && y > 0)
             {
+                Console.WriteLine("Точка попала в 1й квадрант");
                 answer1++;
             }
             if (x < 0 && y < 0)
             {
+                Console.WriteLine("Точка попала в 3й квадрант");
                 answer3++;
+            }
+            if(x >0 && y < 0)
+            {
+                Console.WriteLine("Точка попала в 4й квадрант");
+
+            }
+            if (x < 0 && y > 0)
+            {
+                Console.WriteLine("Точка попала в 2й квадрант");
+
             }
         }
         Console.WriteLine($"Кол. Точек Квадранта 1 = {answer1}, а кол. точек Квадранта 3 = {answer3}");
@@ -711,11 +723,23 @@ public class Program
             double.TryParse(input, out y);
             if (x > 0 && y > 0)
             {
+                Console.WriteLine("Точка попала в 1й квадрант");
                 answer1++;
             }
             if (x < 0 && y < 0)
             {
+                Console.WriteLine("Точка попала в 3й квадрант");
                 answer3++;
+            }
+            if (x > 0 && y < 0)
+            {
+                Console.WriteLine("Точка попала в 4й квадрант");
+
+            }
+            if (x < 0 && y > 0)
+            {
+                Console.WriteLine("Точка попала в 2й квадрант");
+
             }
         }
         Console.WriteLine($"Кол. Точек Квадранта 1 = {answer1}, а кол. точек Квадранта 3 = {answer3}");
